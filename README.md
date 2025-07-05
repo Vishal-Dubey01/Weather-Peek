@@ -1,70 +1,79 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🌦️ WeatherPeek
 
-## Available Scripts
+**WeatherPeek** is a sleek, responsive React web application that lets users check live weather updates for any city, country, or region. It supports dynamic weather queries, regional forecasts, geolocation-based lookup, and includes a dark/light theme toggle — all built with care and style.
 
-In the project directory, you can run:
+[🌐 Live Demo on Vercel](https://vercel.com/vishal-dubey01s-projects/weather-peek/C6w2nf9nfjE6VqbBjm3VbjkvDnc5)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🔍 **City/Region Search** – Fetch real-time weather data by city, country, or state.
+- 📍 **Use My Location** – Get weather based on your device’s current geolocation.
+- 🕶️ **Dark/Light Mode** – Toggle between themes with smooth styling.
+- 🕘 **Recent Search History** – Revisit up to 5 recent locations.
+- 🌐 **Fallback to Region Forecasts** – If city is unrecognized, top cities from the region are fetched.
+- ⚙️ **Responsive & Clean UI** – Optimized for all screen sizes with a glassmorphic design touch.
+- 🖼️ **Weather Icons** – Visual representation of weather using OpenWeatherMap icons.
+- 📦 **Made with Create React App** – Ensures a smooth and scalable development setup.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tech Stack
 
-### `npm run build`
+- ⚛️ **React.js** – Powered by Create React App
+- 🎨 **CSS** – Glassmorphism, fully responsive styling
+- 📡 **OpenWeatherMap API** – For real-time weather data
+- 🌍 **Geolocation API** – To get user’s current location
+- 🚀 **Vercel** – For fast and reliable hosting
+- 🧠 **GeoService.js** – Custom logic to resolve regions into major cities
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧪 Local Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone the Repository
 
-### `npm run eject`
+```bash
+git clone https://github.com/Vishal-Dubey01/Weather-Peek.git
+cd Weather-Peek
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Install Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Add Your API Key
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a `.env` file in the root directory:
 
-## Learn More
+```env
+REACT_APP_WEATHER_API_KEY=your_openweathermap_api_key
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> 🔐 Never commit your `.env` file to GitHub.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Start the App
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Now visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Deployment
 
-### Making a Progressive Web App
+The project is deployed using **Vercel**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🔗 [Live Demo](https://vercel.com/vishal-dubey01s-projects/weather-peek/C6w2nf9nfjE6VqbBjm3VbjkvDnc5)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🙌 Author
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Made by Vishal Dubey** – with ❤️ and a lot of JavaScript.
