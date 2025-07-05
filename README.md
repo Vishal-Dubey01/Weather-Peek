@@ -92,4 +92,4 @@ The project is deployed using **Vercel**.
 
 ## 🙌 Author
 
-**Made by Vishal Dubey** – with ❤️ and a lot of JavaScript.
+**Made by Vishal Kumar Dubey** – with ❤️ and a lot of JavaScript.
