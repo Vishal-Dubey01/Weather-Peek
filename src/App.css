@@ -1,38 +1,296 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #6572ab, #764ba2);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.App {
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  max-width: 350px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  outline: burlywood;
+  margin-right: 10px;
+}
+
+button {
+  padding: 12px 20px;
+  background: #b3dc37;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #adf189;
+}
+
+.toggle-btn {
+  margin-bottom: 1rem;
+  padding: 8px 16px;
+  font-size: 14px;
+  background: none;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+
+.toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: scale(1.03);
+}
+
+.weather-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.dark {
+  background: linear-gradient(to right, #090924, #16213e);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.light {
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  color: #222;
 }
 
-@keyframes App-logo-spin {
-  from {
+.error-text {
+  color: crimson;
+}
+
+.weather-card p,
+.weather-card h3,
+.weather-card h2 {
+  color: inherit;
+}
+
+.spinner {
+  margin: 20px auto;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #00ffea;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
+
+.history {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.history-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 5px 8px 5px 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.history-btn:hover {
+  background-color: rgba(36, 34, 36, 0.3);
+}
+
+.remove-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 12px;
+  margin-left: 6px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.history-btn:hover .remove-btn {
+  display: inline;
+}
+
+.remove-btn:hover {
+  color: beige;
+}
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.get-btn {
+  padding: 0.5rem 1.2rem;
+  background-color: #96d600;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.get-btn:hover {
+  transform: scale(1.05);
+}
+
+.geo-btn {
+  padding: 0.4rem 0.7rem;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: rgb(244, 229, 229);
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px #2d616faa;
+  transition: all 0.3s ease;
+}
+
+.geo-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #00aaff, #4a90e2);
+  box-shadow: 0 0 16px rgba(0, 174, 255, 0.4);
+  color: white;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 3rem;
+  left: 2rem;
+  width: 300px;
+  max-width: 80%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  padding: 1.5rem;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  color: #333;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #111;
+}
+
+.modal-content p {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #444;
+}
+
+.modal-close:hover {
+  transform: scale(1.1);
+  color: crimson;
+}
+
+.about-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: transparent;
+  border: 2px solid currentColor;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: rgba(59, 56, 56, 0.1);
+}
+
+.signature-box {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #083b46, #64d5ef);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+
