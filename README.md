@@ -7,6 +7,22 @@
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Homepage
+
+![Screenshot of WeatherPeek homepage in dark mode](screenshots/DarkMode.png)
+
+### 🌙 Light Mode
+
+![Light Mode](screenshots/LightMode.png)
+
+### 📍 GeoLocation
+
+![Location Fetch](screenshots/UseMyLocation.png)
+
+---
+
 ## ✨ Features
 
 - 🔍 **City/Region Search** – Fetch real-time weather data by city, country, or state.
